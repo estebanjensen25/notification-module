@@ -84,8 +84,8 @@ class NotificationController extends Controller
                 return $button;
             })
             ->rawColumns(['whatsapp', 'email', 'phone'])
-                ->addIndexColumn()
-                ->make(true);
+            ->addIndexColumn()
+            ->make(true);
         } 
         $temporal = DB::table('notification_module_action_user')
         ->where('user_id', Auth::user()->id)

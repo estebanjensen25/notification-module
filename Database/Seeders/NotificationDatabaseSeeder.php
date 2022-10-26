@@ -17,9 +17,9 @@ class NotificationDatabaseSeeder extends Seeder
     {
        
         DB::table('notification_channels')->insert([
-                ['name' => 'WhatsApp'],
-                ['name' => 'Email'],
-                ['name' => 'App']
+                ['name' => 'WhatsApp', 'state' => 0],
+                ['name' => 'Email', 'state' => 1],
+                ['name' => 'App', 'state' => 1]
         ]);
 
         DB::table('notification_modules')->insert([

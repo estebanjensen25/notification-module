@@ -31,8 +31,8 @@ Route::group(['prefix' => 'notification', 'middleware' => 'auth'], function() {
 Route::get('/testEvent', function () {  
     $data['transmitter_establishment_id'] = session()->get('establishment_id');
     $data['transmitter_user_id'] = Auth::user()->id;
-    $data['recipient_users_id'] = [1]; 
-    $data['recipient_establishment_id'] = 1; 
+    $data['recipient_users_id'] = [17]; 
+    $data['recipient_establishment_id'] = 305; 
     $data['module_action_id'] = 5;
     event(new EventNotification($data));
 });

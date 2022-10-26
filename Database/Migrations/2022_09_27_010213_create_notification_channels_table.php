@@ -16,6 +16,7 @@ Class CreateNotificationChannelsTable extends Migration
         Schema::create('notification_channels', function (Blueprint $table) {
             $table->id();
             $table->string('name', 100)->unique();
+            $table->boolean('state');
         });
     }
 
